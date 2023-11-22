@@ -30,4 +30,9 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private List<Menu> menu;
 
+    public User(String username, String password) {
+        this.username = username;
+        this.pwd = password;
+
+    }
 }
