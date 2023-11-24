@@ -27,7 +27,7 @@ https://documenter.getpostman.com/view/30925785/2s9YeD6s8n
 이렇게 코드가 구성이 되면, 실패 했을 때 상태메세지와 상태코드를 응답할 수 없었습니다.
 
 [해결방법]
-정보를 응답하는 모든 Dto에 CommonReponseDto를 상속 받게 했습니다. CommonResponseDto를 추상화하여 모든 Controller의 응답을 ResponseEntity<CommonResponseDto>로 받게 했습니다. 이렇게 코드 변경을 하니 성공햇을 때는
+정보를 응답하는 모든 Dto에 CommonReponseDto를 상속 받게 했습니다. CommonResponseDto를 추상화하여 모든 Controller의 응답을 ResponseEntity,CommonResponseDto>로 받게 했습니다. 이렇게 코드 변경을 하니 성공햇을 때는
 정보를 보내는 자식 클래스를 보내고, 실패를 했을 때는 CommonResponseDto를 응답해 실패 메세지와 코드를 반환했습니다.
 
 [부족한 점]
